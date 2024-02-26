@@ -4,7 +4,7 @@ module.exports = {
         commonjs: true,
         es2021: true
     },
-    extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "airbnb-base"],
+    extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "airbnb-base", "prettier"],
     overrides: [
         {
             env: {
@@ -21,5 +21,8 @@ module.exports = {
         ecmaVersion: "latest"
     },
     plugins: ["@typescript-eslint"],
-    rules: {}
+    rules: {
+        "indent": ["error", 4],
+        "linebreak-style": "off"
+    }
 };

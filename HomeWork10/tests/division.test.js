@@ -1,6 +1,6 @@
 const Calculator = require("../calculator.js");
 
-describe("Деление", () => {
+describe("Division", () => {
     let calculator;
 
     beforeEach(() => {
@@ -8,31 +8,31 @@ describe("Деление", () => {
 
         calculator.divide = jest.fn((a, b) => {
             if (typeof a !== "number" || typeof b !== "number") {
-                throw new Error("Оба аргумента должны быть числами");
+                throw new Error("Both arguments must be numbers");
             }
 
             if (b === 0) {
-                throw new Error("Деление на 0 запрещено");
+                throw new Error("Division by 0 is not allowed");
             }
 
             return a / b;
         });
     });
 
-    it("должно возвращать частное двух чисел", () => {
+    it("should return the quotient of two numbers", () => {
         const result = calculator.divide(6, 3);
         expect(result).toBe(2);
     });
 
-    it("должно выдавать ошибку, если первый аргумент не является числом", () => {
+    it("should throw an error if the first argument is not a number", () => {
         expect(() => calculator.divide("6", 3)).toThrow();
     });
 
-    it("должно выдавать ошибку, если второй аргумент не является числом", () => {
+    it("should throw an error if the second argument is not a number", () => {
         expect(() => calculator.divide(6, "3")).toThrow();
     });
 
-    it("должно выдавать ошибку, если второй аргумент равен 0", () => {
+    it("should throw an error if the second argument is 0", () => {
         expect(() => calculator.divide(6, 0)).toThrow();
     });
 });

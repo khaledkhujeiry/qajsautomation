@@ -1,29 +1,29 @@
-const Calculator = require('../calculator.js');
+const Calculator = require("../calculator.js");
 
-describe("Проверка возвращаемого типа", () => {
+describe("Return Type Verification", () => {
     let calculator;
 
     beforeEach(() => {
         calculator = new Calculator();
     });
 
-    it("должно возвращать число для сложения", () => {
+    it("should return a number for addition", () => {
         expect(typeof calculator.add(1, 2)).toBe("number");
     });
 
-    it("должно возвращать число для умножения", () => {
+    it("should return a number for multiplication", () => {
         expect(typeof calculator.multiply(2, 3)).toBe("number");
     });
 
-    it("должно возвращать число для вычитания", () => {
+    it("should return a number for subtraction", () => {
         expect(typeof calculator.subtraction(5, 2)).toBe("number");
     });
 
-    it("должно возвращать число для деления", () => {
+    it("should return a number for division", () => {
         expect(typeof calculator.divide(6, 3)).toBe("number");
     });
 
-    it("должно возвращать число для возведения в степень", () => {
+    it("should return a number for exponentiation", () => {
         expect(typeof calculator.exponentiation(5)).toBe("number");
     });
 });

@@ -1,13 +1,13 @@
 const Calculator = require("../calculator.js");
 
-describe("Проверка производительности", () => {
+describe("Performance Testing", () => {
     let calculator;
 
     beforeEach(() => {
         calculator = new Calculator();
     });
 
-    it("должно выполнять сложение больших наборов данных за разумное время", () => {
+    it("should perform addition on large data sets within a reasonable time", () => {
         const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         const expectedSum = 55;
 
@@ -19,10 +19,10 @@ describe("Проверка производительности", () => {
         const end = performance.now();
 
         expect(sum).toBe(expectedSum);
-        expect(end - start).toBeLessThan(100); // 100 миллисекунд
+        expect(end - start).toBeLessThan(100); // 100 milliseconds
     });
 
-    it("должно выполнять умножение больших наборов данных за разумное время", () => {
+    it("should perform multiplication on large data sets within a reasonable time", () => {
         const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         const expectedProduct = 3628800;
 
@@ -34,6 +34,6 @@ describe("Проверка производительности", () => {
         const end = performance.now();
 
         expect(product).toBe(expectedProduct);
-        expect(end - start).toBeLessThan(100); // 100 миллисекунд
+        expect(end - start).toBeLessThan(100); // 100 milliseconds
     });
 });

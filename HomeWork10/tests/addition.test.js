@@ -1,21 +1,21 @@
 const Calculator = require("../calculator.js");
 
-describe("Сложение", () => {
+describe("Addition", () => {
     let calculator;
 
     beforeEach(() => {
         calculator = new Calculator();
     });
 
-    it("должно возвращать сумму двух чисел", () => {
+    it("should return the sum of two numbers", () => {
         expect(calculator.add(1, 2)).toBe(3);
     });
 
-    it("должно возвращать сумму нескольких чисел", () => {
+    it("should return the sum of multiple numbers", () => {
         expect(calculator.add(1, 2, 3, 4, 5)).toBe(15);
     });
-    
-    it("должно возвращать 0 для пустого массива", () => {
+
+    it("should return 0 for an empty array", () => {
         expect(calculator.add()).toBe(0);
     });
 });

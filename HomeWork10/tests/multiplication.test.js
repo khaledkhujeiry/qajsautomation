@@ -1,21 +1,21 @@
-const Calculator = require('../calculator.js');
+const Calculator = require("../calculator.js");
 
-describe("Умножение", () => {
+describe("Multiplication", () => {
     let calculator;
 
     beforeEach(() => {
         calculator = new Calculator();
     });
 
-    it("должно возвращать произведение двух чисел", () => {
+    it("should return the product of two numbers", () => {
         expect(calculator.multiply(2, 3)).toBe(6);
     });
 
-    it("должно возвращать произведение нескольких чисел", () => {
+    it("should return the product of multiple numbers", () => {
         expect(calculator.multiply(1, 2, 3, 4, 5)).toBe(120);
     });
 
-    it("должно возвращать 1 для пустого массива", () => {
+    it("should return 1 for an empty array", () => {
         expect(calculator.multiply()).toBe(1);
     });
 });
